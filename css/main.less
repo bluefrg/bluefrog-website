@@ -1,0 +1,360 @@
+@primaryColor: #fd3e32;
+@normalColor: #333;
+
+body,
+html {
+  height: 100%;
+  width: 100%
+}
+
+body {
+  line-height: 24px;
+  color: @normalColor;
+  font-size: 13px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+a {
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+  color: @primaryColor;
+
+  &:focus,
+  &:hover {
+    color: #fd001b;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: #323232;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 43px;
+  letter-spacing: 2px;
+  line-height: 40px;
+}
+
+h1.h1, h2.h2 {
+  letter-spacing: 15px;
+}
+
+@media (max-width: 767px) {
+  h1.h1, h2.h2 {
+    letter-spacing: 0px;
+  }
+}
+
+h2 {
+  font-size: 27px;
+  letter-spacing: 2px;
+  line-height: 37px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+h3 {
+  font-size: 21px;
+  letter-spacing: 4px;
+  line-height: 32px;
+}
+
+h3:after {
+  color: @primaryColor;
+  content: ".";
+  font-size: 34px;
+}
+
+h4 {
+  font-size: 17px;
+  letter-spacing: 2px;
+  line-height: 28px;
+}
+
+h4.h4 {
+  letter-spacing: 4px;
+}
+
+h5 {
+  font-size: 15px;
+  letter-spacing: 2px;
+  line-height: 23px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 13px;
+  letter-spacing: 2px;
+  line-height: 17px;
+  font-weight: 600;
+}
+
+h1.large {
+  font-size: 50px;
+}
+
+p {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0px 0 10px 0;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar-brand img {
+  height: 17px;
+  position: absolute;
+  transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+  -o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+  -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+  -webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+  padding: 10px 0;
+
+  .navbar-nav {
+    .active {
+      a {
+        color: @primaryColor;
+        background-color: transparent;
+      }
+    }
+
+    > li > a {
+      color: white;
+
+      &:focus, &:hover {
+        color: @primaryColor !important;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    &, &:hover, &:focus {
+      background-color: rgba(0, 0, 0, .90);
+      border-color: black;
+      color: white;
+    }
+  }
+
+  &.affix {
+    background-color: rgba(255, 255, 255, .95);
+
+    .navbar-nav .active a, .navbar-nav a {
+      color: @normalColor;
+    }
+
+    .navbar-collapse {
+      &.in, &.collapsing {
+        background-color: rgba(255, 255, 255, .95);
+        border-color: transparent;
+      }
+    }
+  }
+
+  &.affix-top {
+    .navbar-nav .active a, .navbar-nav a {
+      color: white;
+      background-color: transparent;
+    }
+
+    .navbar-collapse {
+      &.in, &.collapsing {
+        background-color: rgba(0, 0, 0, .90);
+        border: none;
+      }
+    }
+  }
+
+  .navbar-collapse {
+    span {
+      display: none;
+    }
+
+    &.in, &.collapsing {
+      span {
+        display: inline;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+.affix-top {
+  .header-dark {
+    opacity: 0;
+  }
+  .header-light {
+    opacity: 1;
+  }
+}
+
+.affix {
+  .header-dark {
+    opacity: 1;
+  }
+  .header-light {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+.btn:focus {
+  outline: none;
+}
+
+.btn, button {
+  font-size: 12px;
+  line-height: normal;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  padding: 11px 20px;
+}
+
+
+
+
+
+header, section.error {
+  position: relative;
+  width: 100%;
+  overflow-y: hidden;
+  text-align: center;
+  min-height: 100%;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+    text-shadow: 0px 0px 3px rgba(150, 150, 150, 1);
+
+    &:after {
+      content: ""; // No red dot in the header
+    }
+  }
+
+  .btn {
+    color: #323232;
+    background: rgba(255,255,255,1);
+    border: none;
+  }
+
+  .btn:hover {
+    background: rgba(255,255,255,0.85);
+    color: #323232;
+  }
+
+  .header-content {
+    text-align: center;
+    position: relative;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+
+    .header-content-inner {
+      max-width: none;
+      width: 100%;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%)
+    }
+
+  }
+}
+
+
+
+
+
+
+
+section.error {
+  background-color: @normalColor;
+}
+
+
+
+
+
+
+
+
+.spacer-15 {
+  width: 100%;
+  height: 15px;
+}
+
+.spacer-30 {
+  width: 100%;
+  height: 30px;
+}
+
+.spacer-45 {
+  width: 100%;
+  height: 45px;
+}
+
+.spacer-60 {
+  width: 100%;
+  height: 60px;
+}
+
+.spacer-75 {
+  width: 100%;
+  height: 75px;
+}
+
+.spacer-90 {
+  width: 100%;
+  height: 90px;
+}

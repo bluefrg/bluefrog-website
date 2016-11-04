@@ -1,0 +1,14 @@
+{
+  "name": "bluefrog.ca",
+  "dependencies": {
+    "bootstrap": "^3.3",
+    "wow": "^1.0",
+    "font-awesome": "^4.2",
+    "animate.css": "^3.5",
+    "aws-sdk": "aws-sdk-js#^2.6.12",
+    "jquery": "^3.1.1",
+    "parallax.js": "^1.4.2",
+    "autogrow-textarea": "*",
+    "bootbox.js": "bootbox#^4.4.0"
+  }
+}
