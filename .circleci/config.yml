@@ -1,0 +1,20 @@
+version: 2
+jobs:
+   build:
+     docker:
+       - image: 500035830678.dkr.ecr.us-east-1.amazonaws.com/circleci-node7-awscli
+     steps:
+       - checkout
+       - run:
+          name: Build assets
+          command: |
+            npm install
+            npm run build
+       - deploy:
+          name: Deploy to S3
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              aws s3 sync . s3://${AWS_S3_BUCKET} --delete --exclude "node_modules/*" --exclude ".git/*" --exclude ".circleci/*"
+              #aws cloudfront create-invalidation --distribution-id=${AWS_CLOUDFRONT_DISTRO} --paths '/*'
+            fi
+  
