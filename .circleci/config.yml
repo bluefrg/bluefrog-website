@@ -15,6 +15,6 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               aws s3 sync . s3://${AWS_S3_BUCKET} --delete --exclude "node_modules/*" --exclude ".git/*" --exclude ".circleci/*"
-              #aws cloudfront create-invalidation --distribution-id=${AWS_CLOUDFRONT_DISTRO} --paths '/*'
+              aws cloudfront create-invalidation --distribution-id=${AWS_CLOUDFRONT_DISTRO} --paths '/*'
             fi
   
