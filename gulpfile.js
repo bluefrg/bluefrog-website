@@ -18,4 +18,8 @@ gulp.task('bower', function () {
     return bower();
 });
 
+gulp.task('watch', function () {
+    gulp.watch('css/*.less', ['build-css']);
+});
+
 gulp.task('default', ['bower', 'build-css']);

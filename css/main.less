@@ -1,5 +1,5 @@
-@primaryColor: #fd3e32;
-@normalColor: #333;
+@primaryColor: #00a7fd;
+@normalColor: rgba(68, 68, 68, 0.7);
 
 body,
 html {
@@ -11,9 +11,9 @@ body {
   line-height: 24px;
   color: @normalColor;
   font-size: 13px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Roboto","Helvetica Neue",HelveticaNeue,Arial,sans-serif;
   font-weight: 400;
-  letter-spacing: 1px;
+  background: #fafafa;
 }
 
 a {
@@ -24,7 +24,7 @@ a {
 
   &:focus,
   &:hover {
-    color: #fd001b;
+    color: lighten(@primaryColor, 20%);
     outline: none;
     text-decoration: none;
   }
@@ -34,14 +34,15 @@ a {
 h1, h2, h3, h4, h5, h6 {
   color: #323232;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 800;
   margin-top: 0px;
   margin-bottom: 10px;
+  font-family: 'Mukta', sans-serif;
 }
 
 h1 {
   font-size: 43px;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   line-height: 40px;
 }
 
@@ -100,16 +101,13 @@ h6 {
 }
 
 h1.large {
-  font-size: 50px;
+  font-size: 50px; 
 }
 
 p {
-  line-height: 20px;
   font-size: 14px;
   font-weight: 300;
   margin: 0px 0 10px 0;
-  color: #888;
-  letter-spacing: 1px;
 }
 
 
@@ -143,6 +141,8 @@ p {
   -moz-transition: all .35s;
   transition: all .35s;
   padding: 10px 0;
+  font-family: 'Mukta', sans-serif;
+  font-weight: 700;
 
   .navbar-nav {
     .active {
@@ -299,6 +299,7 @@ header, section.error {
     padding: 0;
     height: 100vh;
     width: 100%;
+    font-family: 'Mukta', sans-serif;
 
     .header-content-inner {
       max-width: none;
@@ -317,12 +318,48 @@ header, section.error {
 
 
 
-
+header {
+  .fas {
+    opacity: 0.3;
+  } 
+}
 section.error {
   background-color: @normalColor;
 }
+section#about {
+  .media-object {
+    max-width: 120px;
+  }
+}
+section#tech {
+    #logos {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      
+      img {
+        filter: grayscale(100%) brightness(100%);
+        opacity: 0.4;
+        max-height: 80px;
+        max-width: 100%;
+        padding: 10px 0;
+    }
+  }
+}
+section#certifications {
+  .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+section {
+  padding: 75px 0;
 
-
+  &:nth-child(even) {
+    background-color: #fff;
+  }
+}
 
 
 
