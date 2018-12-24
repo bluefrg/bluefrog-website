@@ -1,0 +1,9 @@
+image: atlassian/pipelines-awscli:1.16.29
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - aws s3 sync . s3://${AWS_S3_BUCKET} --delete --exclude ".git/*" --exclude "bitbucket-pipelines.yml"
+            - aws cloudfront create-invalidation --distribution-id=${AWS_CLOUDFRONT_DISTRO} --paths '/*'

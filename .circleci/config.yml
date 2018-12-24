@@ -9,12 +9,12 @@ jobs:
           name: Build assets
           command: |
             npm install
-            npm run build
+            npm run generate
        - deploy:
           name: Deploy to S3
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              aws s3 sync . s3://${AWS_S3_BUCKET} --delete --exclude "node_modules/*" --exclude ".git/*" --exclude ".circleci/*" --acl public-read
+              aws s3 sync ./dist s3://${AWS_S3_BUCKET}
               aws cloudfront create-invalidation --distribution-id=${AWS_CLOUDFRONT_DISTRO} --paths '/*'
             fi
   
