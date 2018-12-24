@@ -2,7 +2,7 @@ version: 2
 jobs:
    build:
      docker:
-       - image: 500035830678.dkr.ecr.us-east-1.amazonaws.com/circleci-node7-awscli
+       - image: 500035830678.dkr.ecr.us-east-1.amazonaws.com/node-awscli
      steps:
        - checkout
        - run:
