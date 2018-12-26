@@ -11,8 +11,9 @@
 
             </div>
             <div class="col-md-6 col-sm-12">
-                <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2018-04-03&ci=AWS00364299" title="View my AWS certifications."><img src="~/assets/img/certifications/AWS_Certified_Logo_SAA_588x300_Color.png" class="img-fluid"><br>
-                    <img src="~/assets/img/certifications/AWS_Certified_Tag__SAA_588x300-Color.png" class="img-fluid"></a>
+                <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2018-04-03&ci=AWS00364299" title="View my AWS certifications.">
+                <img src="~/assets/img/certifications/AWS_Certified_Logo_SAA_588x300_Color.png" class="img-fluid px-4"><br>
+                    <img src="~/assets/img/certifications/AWS_Certified_Tag__SAA_588x300-Color.png" class="img-fluid px-4"></a>
             </div>
         </div>
 

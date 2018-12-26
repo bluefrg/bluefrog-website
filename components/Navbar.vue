@@ -63,7 +63,7 @@ export default {
         else {
             $('.navbar').removeClass('affix-top').addClass('affix')
         }
-    })
+    }).trigger('scroll')
   },
 }
 </script>
@@ -71,29 +71,31 @@ export default {
 <style scoped lang="scss">
 @import '~assets/scss/variables.scss';
 
-.navbar-brand img {
+.navbar-brand {
+  position: relative;
+  width: 133px;
   height: 17px;
-  position: absolute;
-  transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
-  -o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
-  -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
-  -webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+  padding-left: 15px;
+
+  img {
+    position: absolute;
+    height: 100%;
+    transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+  }
 }
 
 .navbar {
-  -webkit-transition: all .35s;
-  -moz-transition: all .35s;
   transition: all .35s;
   padding: 10px 0;
   font-family: 'Mukta', sans-serif;
   font-weight: 700;
+  
 
   .navbar-nav {
-
     .active {
       a {
         color: $primaryColor;
-        background-color: transparent;
+        // background-color: transparent;
       }
     }
 
@@ -107,11 +109,7 @@ export default {
   }
 
   .navbar-toggler {
-    &, &:hover, &:focus {
-      background-color: rgba(0, 0, 0, .90);
-      border-color: black;
-      color: white;
-    }
+    color: white;
   }
 
   &.affix {
@@ -121,22 +119,18 @@ export default {
       color: $normalColor;
     }
 
-    .navbar-collapse {
-      &.in, &.collapsing {
-        background-color: rgba(255, 255, 255, .95);
-        border-color: transparent;
-      }
+    .navbar-toggler {
+      color: black;
     }
   }
 
   &.affix-top {
     .navbar-nav .active a, .navbar-nav a {
       color: white;
-      background-color: transparent;
     }
 
     .navbar-collapse {
-      &.in, &.collapsing {
+      &.show, &.collapsing {
         background-color: rgba(0, 0, 0, .90);
         border: none;
       }
@@ -150,6 +144,15 @@ export default {
 
     &.show, &.collapsing {
       text-align: left;
+
+      a {
+        padding-left: 15px;
+      }
+
+      i {
+        // Hide icons when in wide menu
+        display: none;
+      }
       
       span {
         display: inline;

@@ -26,9 +26,8 @@
 header {
   background: black url('~assets/img/full/c3-blue.jpg');
   background-size: cover;
-  position: relative;
+  background-position: center;
   width: 100%;
-  overflow-y: hidden;
   text-align: center;
   min-height: 100%;
 
