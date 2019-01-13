@@ -1,4 +1,4 @@
-workflow "New workflow" {
+workflow "Deploy website" {
   on = "push"
   resolves = [
     "Deploy to S3",
@@ -34,5 +34,5 @@ action "Invalidate CloudFront cache" {
   env = {
     AWS_CLOUDFRONT_DISTRO = "E2107SD7GS1DUD"
   }
-  runs = "aws --version"
+  runs = "aws cloudfront create-invalidation --distribution-id=E2107SD7GS1DUD --paths \"/*\""
 }
