@@ -34,6 +34,6 @@ action "Invalidate CloudFront cache" {
   env = {
     AWS_CLOUDFRONT_DISTRO = "E2107SD7GS1DUD"
   }
-  runs = "aws"
-  args = "cloudfront"
+  runs = "aws  cloudfront create-invalidation"
+  args = "--distribution-id=E2107SD7GS1DUD --paths '/*'"
 }
