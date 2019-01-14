@@ -35,5 +35,5 @@ action "Invalidate CloudFront cache" {
     AWS_CLOUDFRONT_DISTRO = "E2107SD7GS1DUD"
   }
   runs = "aws"
-  args = "\"cloudfront\""
+  args = "cloudfront"
 }
