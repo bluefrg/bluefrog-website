@@ -10,7 +10,7 @@
                 <h5>Mike is a nimble creature who spends his professional life crafting and designing works of art on the web.</h5>
                 <p>I'm a Development Manager for <a href="https://www.birchwood.ca/">Birchwood Automotive Group</a>, we're Manitoba's largest automotive dealer group with over 20 dealers spanning Manitoba, Saskatchewan, and North Dakota. We specialize in building custom software solutions to meet the needs of our dealers and ever advancing customers.</p>
                 <p>My career exists because of the hard work and dedication of many people all around the world who contribute to free and open source software. Linux runs not only my phone and servers, but also my desktop.</p>
-                <p>In the off season you'll find me trying local craft beers, messing around with <a href="https://www.particle.io/">Particles</a>/Raspberry Pis and sharing my knowledge and experience with peers. </p>
+                <p>In my off time you'll find me trying local craft beers, messing around with a <a href="https://www.particle.io/">Particle</a> or Raspberry Pi and sharing my knowledge and experience with peers. </p>
 
             </div>
 

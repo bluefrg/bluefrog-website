@@ -35,7 +35,7 @@
                 </li>
                 <li>
                     <a href="https://ca.linkedin.com/in/michealfrank" class="nav-link" title="Join my network on LinkedIn">
-                        <i class="fab fa-linkedin-in" aria-hidden="true"></i> <span>LinkedIn</span></a>
+                        <i class="fab fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
                 </li>
                 <li>
                     <a href="https://instagram.com/bluefrg" class="nav-link" title="See my passion on Instagram">

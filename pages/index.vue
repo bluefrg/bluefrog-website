@@ -8,7 +8,7 @@
     <Contact/>
 
     <div class="container">
-      <p class="created-using">Created using <a href="https://nuxtjs.org/">Nuxt.js</a> and Vue.js.</p>
+      <p class="created-using">Built using <i class="fab fa-vuejs" title="Vue.js"></i> Hosted on <i class="fab fa-aws" title="AWS"></i></p>
     </div>
   </div>
 </template>
