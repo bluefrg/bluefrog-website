@@ -24,7 +24,7 @@ action "Deploy to S3" {
     AWS_S3_BUCKET = "bluefrog-ca-website1"
   }
   secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
-  runs = "aws s3 sync ./dist s3://bluefrog-ca-website1 --delete"
+  runs = "aws s3 sync ./dist s3://bluefrog-ca-website1 --delete --cache-control max-age=31536000"
 }
 
 action "Invalidate CloudFront cache" {
