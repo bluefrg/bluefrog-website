@@ -2,7 +2,7 @@ workflow "Deploy website" {
   on = "push"
   resolves = [
     "Deploy to S3",
-    "Invalidate CloudFront cache",
+    "Create Nuxt.js project",
   ]
 }
 
@@ -20,20 +20,9 @@ action "Create Nuxt.js project" {
 action "Deploy to S3" {
   uses = "actions/aws/cli@8d318706868c00929f57a0b618504dcdda52b0c9"
   needs = ["Create Nuxt.js project"]
-  env = {
-    AWS_S3_BUCKET = "bluefrog-ca-website1"
-  }
   secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
-  runs = "aws s3 sync ./dist s3://bluefrog-ca-website1 --delete --cache-control max-age=31536000"
-}
-
-action "Invalidate CloudFront cache" {
-  uses = "actions/aws/cli@8d318706868c00929f57a0b618504dcdda52b0c9"
-  needs = ["Create Nuxt.js project"]
-  secrets = ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
+  runs = "aws s3 sync ./dist s3://bluefrog.ca --delete --cache-control max-age=31536000"
   env = {
-    AWS_CLOUDFRONT_DISTRO = "E2107SD7GS1DUD"
+    AWS_S3_BUCKET = "bluefrog.ca"
   }
-  runs = "aws cloudfront create-invalidation"
-  args = "--distribution-id=E2107SD7GS1DUD --paths /*"
 }
