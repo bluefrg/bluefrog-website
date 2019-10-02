@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Install dependencies
     - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - run: npm install
+    - name: Install dependencies
+      run: npm install
     - name: Create Nuxt.js project
-    - run: npm run generate
+      run: npm run generate
     - name: Deploy to S3
       uses: actions/aws/cli@master
       env:
