@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-6">
 
-                <p>You can reach me by <a href="#" v-on:click.prevent="startChat">sending me an instant message</a>, 
+                <p>You can reach me by sending me an instant message from the bottom right, 
                     or through my social media accounts listed in the menu, or simply by email at:</p>
                 <p class="text-center" style="font-size: 20px;"><strong>{{ showMyEmail() }}</strong></p>
 
@@ -58,15 +58,6 @@ export default {
     methods: {
         showMyEmail()  {
             return 'mike' + '@blue' + 'frog.ca'
-        },
-        startChat() {
-            if ( window.$crisp ) {
-                // If crisp is enabled, load the modal
-                $crisp.push(['do', 'chat:open'])
-            }
-            else {
-                alert('Could not load chat. Please email me directly.')
-            }
         },
         submitContact() {
             const sns = new AWS.SNS()
