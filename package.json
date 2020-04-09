@@ -11,13 +11,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/google-tag-manager": "^2.3.1",
+    "@nuxtjs/google-tag-manager": "^2.3.2",
     "cross-env": "^6.0.3",
-    "nuxt": "^2.10.2"
+    "nuxt": "^2.12.2"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.19.4",
-    "sass-loader": "^8.0.0"
+    "sass-loader": "^8.0.2"
   }
 }
