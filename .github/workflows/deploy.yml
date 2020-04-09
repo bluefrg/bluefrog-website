@@ -16,7 +16,7 @@ jobs:
     - name: Create Nuxt.js project
       run: npm run generate
     - name: Deploy to S3
-      uses: amazon/aws-cli@latest
+      uses: docker://amazon/aws-cli:latest
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
