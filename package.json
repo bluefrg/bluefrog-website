@@ -12,12 +12,12 @@
   },
   "dependencies": {
     "@nuxtjs/google-tag-manager": "^2.3.2",
-    "cross-env": "^6.0.3",
-    "nuxt": "^2.13.3"
+    "cross-env": "^7.0.2",
+    "nuxt": "^2.14.1"
   },
   "devDependencies": {
     "node-sass": "^4.14.1",
-    "nodemon": "^1.19.4",
-    "sass-loader": "^8.0.2"
+    "nodemon": "^2.0.4",
+    "sass-loader": "^9.0.2"
   }
 }
